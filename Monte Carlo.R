@@ -20,7 +20,7 @@ n2 = randn(1000,1560)
 srho = sqrt(1-rho^2)
 
 for (i in 1:1559){
-  S2[,i+1] <- phi*(v - S2[,i])*del + S2[,i] + (n2[,i]*srho*sdel +rho*n1[,i]*sdel)	*eta*sqrt(S2[,i])
+  S2[,i+1] <- phi*(v - S2[,i])*del + S2[,i] + (n2[,i]*srho*sdel +rho*n1[,i]*sdel)*eta*sqrt(S2[,i])
   y[,i+1] <- y[,i] + (m - (S2[,i])/2 )*del + sqrt(S2[,i])*n1[,i]*sdel 
   }
 

@@ -9,4 +9,6 @@ Introduced by Heston in A closed-form solution for options with stochastic volat
 
 Where &rho; is the correlation between Brownian motions W<sub>1t</sub> and W<sub>2t</sub>, and parameters m, &upsilon;, &eta;, &phi; and &rho; are set to parameter values deemed reasonable for stock price simulation, with set m = 0.05, &upsilon; = 0.04, &eta; = 0.5, &phi; = 5, and &rho; = -0.5.
 
-Samples are drawn 
+The model uses one year as a time unit, and given the approximately 252 trading days in a year, one day is 1/252. Each day is given N=1560 observations, and paths are simulated with discrete time interval &Delta;<sub>N</sub> = (1/252)/N
+
+Finally, a calculation of realized volatility is given by &Sigma;<sub>i</sub>&sigma;<sub>i</sub>&Delta;<sub>N</sub>

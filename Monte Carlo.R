@@ -36,3 +36,7 @@ for (i in 1:1559){
 y_78 = y[,seq(1,ncol(y), 20)]
 y_156 = y[,seq(1,ncol(y), 10)]
 y_312 = y[,seq(1,ncol(y), 5)]
+
+#Volatility Calculation
+
+RV = (rowSums(S2))*del

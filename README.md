@@ -11,4 +11,6 @@ Where &rho; is the correlation between Brownian motions W<sub>1t</sub> and W<sub
 
 The model uses one year as a time unit, and given the approximately 252 trading days in a year, one day is 1/252. Each day is given N=1560 observations, and paths are simulated with discrete time interval &Delta;<sub>N</sub> = (1/252)/N
 
-Finally, a calculation of realized volatility is given by &Sigma;<sub>i</sub>&sigma;<sub>i</sub>&Delta;<sub>N</sub>
+Data is then sampled in 20, 10, and 5 minute intervals
+
+Finally, a calculation of realized volatility for each of the simulations is given by &Sigma;<sub>i</sub>&sigma;<sub>i</sub>&Delta;<sub>N</sub>

@@ -3,4 +3,10 @@ A Monte-Carlo simulation of the Heston Stochastic Volatility model ran in R
 
 Introduced by Heston in A closed-form solution for options with stochastic volatility with appli-cations to bond and currency options (1993), the following code simulates the Heston Stochastic Volatility model using R, given by:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=dY_t=(m-\sigma^2_t/2)dt&plus;\sigma_tdW_{1t}&space;\\&space;d\sigma^2_t=&space;\phi(\upsilon-\sigma^2_t)dt&plus;\eta\sigma_tW_{2t}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?dY_t=(m-\sigma^2_t/2)dt&plus;\sigma_tdW_{1t}&space;\\&space;d\sigma^2_t=&space;\phi(\upsilon-\sigma^2_t)dt&plus;\eta\sigma_tW_{2t}" title="dY_t=(m-\sigma^2_t/2)dt+\sigma_tdW_{1t} \\ d\sigma^2_t= \phi(\upsilon-\sigma^2_t)dt+\eta\sigma_tW_{2t}" /></a>
+ dY<sub>t</sub>=(m-&sigma;<sub>t</sub><sup>2</sup>/2)dt+&sigma;<sub>t</sub>dW<sub>1t</sub>
+ 
+ d&sigma;<sup>2</sup><sub>t</sub>= &phi;(&upsilon;-&sigma;<sub>t</sub><sup>2</sup>)dt+&eta;&sigma;<sub>t</sub>W<sub>2t</sub>
+
+Where &rho; is the correlation between Brownian motions W<sub>1t</sub> and W<sub>2t</sub>, and parameters m, &upsilon;, &eta;, &phi; and &rho; are set to parameter values deemed reasonable for stock price simulation, with set m = 0.05, &upsilon; = 0.04, &eta; = 0.5, &phi; = 5, and &rho; = -0.5.
+
+Samples are drawn 

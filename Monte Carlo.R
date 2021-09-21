@@ -1,5 +1,3 @@
-library(varbvs)
-
 #Model Parametrs
 
 m = 0.05 
@@ -11,15 +9,22 @@ del = (1/252)/1559
 sdel = sqrt(del)
 srho = sqrt(1-rho^2)
 
-#Simulation
+#Simulation set up 
 
-blanks=matrix(0,nrow=10000,ncol=1559)
-y = cbind(matrix(m,nrow=10000,ncol=1),blanks)
-S2 = cbind(matrix(v,nrow=10000,ncol=1),blanks)
-W1 = randn(10000,1560)
-n1 = randn(10000,1560)
-W2 = (n2*srho +rho*W1)
+n = 10000 #number of simulations
 
+blanks=matrix(0,nrow=n,ncol=1559)
+y = cbind(matrix(m,nrow=n,ncol=1),blanks)
+S2 = cbind(matrix(v,nrow=n,ncol=1),blanks)
+W1 = matrix(rnorm(n*15600),n,1560)
+n1 = matrix(rnorm(n*15600),n,1560)
+W2 = (n1*srho +rho*W1)
+
+#To test for the correlation of -0.5 between brownian motions W1 and W2
+#use cor(W1[i,],W2[i,]) for any i < number of simulations
+
+
+#Heston Volatility Equations
 
 for (i in 1:1559){
   S2[,i+1] <- S2[,i] +phi*(v - S2[,i])*del + eta*sqrt(S2[,i])*W2[,i]*sdel

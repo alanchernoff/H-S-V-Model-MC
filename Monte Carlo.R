@@ -39,4 +39,4 @@ y_312 = y[,seq(1,ncol(y), 5)]
 
 #Volatility Calculation
 
-RV = (rowSums(S2))*del
+IV = (rowSums(S2))*del
